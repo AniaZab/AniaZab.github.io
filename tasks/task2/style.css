@@ -27,7 +27,8 @@ li a:hover:not(.active) {
 }
 
 img {
-    width: 100%;
+    width: 98%;
+    float: none;
 }
 
 nav {
@@ -48,7 +49,7 @@ header {
 }
 
 main {
-    padding: 20px;
+    padding: 5px;
 }
 
 aside {
