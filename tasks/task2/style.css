@@ -31,8 +31,9 @@ nav {
 }
 
 header {
-    background: rgb(117, 117, 117);
+    background-color: #666;
+    padding: 30px;
     text-align: center;
-    color: white;
     font-size: 30px;
+    color: white;
 }
