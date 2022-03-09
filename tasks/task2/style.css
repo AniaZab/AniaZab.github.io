@@ -47,18 +47,6 @@ header {
     padding: 5px;
 }
 
-section {
-    width: 350px;
-    float: left;
-    padding: 10px;
-}
-
-aside {
-    float: left;
-    background-color: #666;
-    width: 30%;
-}
-
 footer {
     background-color: #2f2553;
     text-align: center;
