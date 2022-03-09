@@ -50,6 +50,7 @@ section {
 aside {
     float: left;
     background-color: #666;
+    width: 30%;
 }
 
 footer {
