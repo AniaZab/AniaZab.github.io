@@ -23,7 +23,7 @@ li a:hover:not(.active) {
 }
 
 .active {
-    background-color: #2f2553;
+    background-color: rgb(92, 78, 145);
 }
 
 img {
@@ -40,7 +40,6 @@ nav {
 }
 
 header {
-    width: 99%;
     background-color: #666;
     text-align: center;
     /*clear: both;*/
@@ -48,6 +47,13 @@ header {
     color: white;
     padding: 5px;
     height: 20%;
+}
+
+article {
+    float: left;
+    padding: 20px;
+    width: 50%;
+    background-color: #f1f1f1;
 }
 
 main {
@@ -65,10 +71,11 @@ aside {
 }
 
 footer {
-    background-color: #2f2553;
+    background-color: rgb(92, 78, 145);
     text-align: center;
     clear: both;
     color: white;
+    top: 5px;
     padding: 5px;
     bottom: 10px;
 }
