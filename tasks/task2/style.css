@@ -23,7 +23,7 @@ li a:hover:not(.active) {
 }
 
 .active {
-    background-color: #7a60d8;
+    background-color: #2f2553;
 }
 
 img {
@@ -35,7 +35,6 @@ nav {
     width: 100%;
     font-size: 20px;
     padding: 5px;
-    position: fixed;
     height: 50px;
 }
 
@@ -43,23 +42,24 @@ header {
     width: 98%;
     background-color: #666;
     text-align: center;
-    clear: both;
+    /*clear: both;*/
     font-size: 30px;
     color: white;
-    margin: 0;
     padding: 5px;
+    position: fixed;
 }
 
 main {
-    padding: 5px;
-    width: 98%;
+    padding: 10px;
+    width: 50%;
+    top: 50px;
 }
 
 aside {
     background-color: #666;
     padding: 10px;
     width: 50%;
-    right: 20px;
+    top: 50px;
     float: left;
 }
 
