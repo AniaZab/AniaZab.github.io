@@ -38,6 +38,7 @@ nav {
     height: 50px;
     top: 20%;
     margin-right: 5px;
+    margin-left: 5px;
 }
 
 header {
@@ -67,7 +68,7 @@ article {
 aside {
     background-color: #666;
     padding: 10px;
-    width: 50%;
+    width: 48%;
     float: left;
 }
 
