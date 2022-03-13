@@ -36,10 +36,11 @@ nav {
     font-size: 20px;
     padding: 5px;
     height: 50px;
+    top: 20%;
 }
 
 header {
-    width: 100%;
+    width: 99%;
     background-color: #666;
     text-align: center;
     /*clear: both;*/
@@ -52,7 +53,6 @@ header {
 main {
     padding: 10px;
     width: 50%;
-    top: 50px;
 }
 
 aside {
@@ -70,4 +70,5 @@ footer {
     clear: both;
     color: white;
     padding: 5px;
+    bottom: 10px;
 }
