@@ -39,14 +39,14 @@ nav {
 }
 
 header {
-    width: 98%;
+    width: 100%;
     background-color: #666;
     text-align: center;
     /*clear: both;*/
     font-size: 30px;
     color: white;
     padding: 5px;
-    position: fixed;
+    height: 20%;
 }
 
 main {
@@ -61,6 +61,7 @@ aside {
     width: 50%;
     top: 50px;
     float: left;
+    right: 20px;
 }
 
 footer {
