@@ -56,19 +56,17 @@ article {
     background-color: #f1f1f1;
 }
 
-section ::after {
-    content: "";
+.tab {
     display: table;
     clear: both;
-    padding: 10px;
     width: 100%;
+    background-color: rgb(134, 51, 51);
 }
 
 aside {
     background-color: #666;
     padding: 10px;
-    width: 50%;
-    top: 50px;
+    width: 45%;
     float: left;
     right: 20px;
 }
