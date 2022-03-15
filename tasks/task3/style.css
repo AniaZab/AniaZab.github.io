@@ -1,0 +1,100 @@
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+    
+.button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: rgb(92, 78, 145);
+}
+
+img {
+    width: 100%;
+    float: none;
+}
+
+nav {
+    width: 100%;
+    font-size: 20px;
+    padding: 5px;
+    height: 50px;
+    margin-left: -5px;
+}
+
+header {
+    background-color: #666;
+    text-align: center;
+    /*clear: both;*/
+    font-size: 30px;
+    color: white;
+    padding: 5px;
+    height: 20%;
+}
+
+article {
+    float: left;
+    width: 46%;
+    padding: 2%;
+    background-color: #f1f1f1;
+}
+
+.tab {
+    display: table;
+    clear: both;
+    width: 50%;
+    background-color: rgb(134, 51, 51);
+    padding: 1%;
+    display: center;
+}
+
+aside {
+    background-color: #666;
+    width: 48%;
+    padding: 1%;
+    float: left;
+}
+
+footer {
+    background-color: rgb(92, 78, 145);
+    text-align: center;
+    clear: both;
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+}
