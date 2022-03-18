@@ -24,8 +24,13 @@ const clickCard = function() {
     document.getElementById(activeCard.id).value = cardsValues[whoseTurn];
     cards[activeCard.id] = cardsValues[whoseTurn];
     activeCard.classList.add(cardsSigns[whoseTurn]);
+    cards[activeCard.id].removeEventListener("click", clickCard);
     numberOfMoves = numberOfMoves + 1;
     console.log("kliknieta karta!");
+    console.log("Id:");
+    console.log(activeCard.id);
+    console.log("Value:");
+    console.log(document.getElementById(activeCard.id).value);
     if (numberOfMoves >= 5) {
         checkIfGameIsFinished();
     }
@@ -45,20 +50,25 @@ const checkIfGameIsFinished = function() {
         }
     }
     for (i = 0; i < 3; i++) {
-        if (tableOfValues[0, i] == tableOfValues[1, i] && tableOfValues[0, i] == tableOfValues[2, i]) {
+        if (tableOfValues[0, i] == tableOfValues[1, i] && tableOfValues[0, i] == tableOfValues[2, i] &&
+            tableOfValues[0, i] != "0") {
             console.log("koniec gry!");
         }
     }
     for (i = 0; i < 3; i++) {
-        if (tableOfValues[i, 0] == tableOfValues[i, 1] && tableOfValues[i, 0] == tableOfValues[i, 2]) {
+        if (tableOfValues[i, 0] == tableOfValues[i, 1] && tableOfValues[i, 0] == tableOfValues[i, 2] &&
+            tableOfValues[i, 0] != "0") {
             console.log("koniec gry!");
         }
     }
-    if (tableOfValues[0, 0] == tableOfValues[1, 1] && tableOfValues[0, 0] == tableOfValues[2, 2]) {
-        console.log("koniec gry!");
-    }
-    if (tableOfValues[0, 2] == tableOfValues[1, 1] && tableOfValues[0, 2] == tableOfValues[2, 0]) {
-        console.log("koniec gry!");
+    if (tableOfValues[1, 1] != "0") {
+        if (tableOfValues[0, 0] == tableOfValues[1, 1] && tableOfValues[0, 0] == tableOfValues[2, 2]) {
+            console.log("koniec gry!");
+        }
+        if (tableOfValues[0, 2] == tableOfValues[1, 1] && tableOfValues[0, 2] == tableOfValues[2, 0]) {
+            console.log("koniec gry!");
+        }
+
     }
 }
 
