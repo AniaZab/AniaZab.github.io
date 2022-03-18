@@ -15,6 +15,7 @@ div {
     border-style: solid;
     border-color: white;
     float: left;
+    cursor: pointer;
 }
 
 button {
@@ -24,7 +25,8 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 30px;
+    font-size: 50px;
+    height: 200px;
     width: 80%;
     margin: 5%;
     padding: 5%;
@@ -94,7 +96,7 @@ article {
     width: 36%;
     padding: 2%;
     background-color: #f1f1f1;
-    height: 300px;
+    height: 400px;
 }
 
 .tab {
@@ -114,7 +116,7 @@ aside {
     padding-top: 2%;
     padding-bottom: 2%;
     float: left;
-    height: 300px;
+    height: 400px;
 }
 
 footer {
