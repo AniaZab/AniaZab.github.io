@@ -1,21 +1,31 @@
-.button {
-  border: none;
-  color: red;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  width: 10%;
-  margin: 1.5%;
-  padding: 1%;
-  transition-duration: 0.4s;
-  cursor: pointer;
+.circle {
+    text-align: center;
+    font-size: 16px;
 }
-    
+
+.cross {
+    text-align: center;
+    font-size: 16px;
+}
+
+.button {
+    border: none;
+    color: red;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 10%;
+    margin: 1.5%;
+    padding: 1%;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
 .button:hover {
-  background-color: #4CAF50;
-  color: white;
+    background-color: #4CAF50;
+    color: white;
 }
 
 ul {

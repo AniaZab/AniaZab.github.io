@@ -1,12 +1,77 @@
 let numberOfClicks = 0;
+const cardsSigns = ["circle", "cross"];
+const cardsValues = ["O", "X"];
+let cards = document.querySelectorAll("div");
+cards = [...cards];
+let whoseTurn = 0;
+let tableOfValues = [
+    ["0", "0", "0"],
+    ["0", "0", "0"],
+    ["0", "0", "0"]
+];
+let numberOfMoves = 0;
+init();
+
+
+const init = function() {
+    cards.forEach(card => {
+        card.classList.add("hidden")
+        card.addEventListener("click", clickCard) //nasłuchuje na click i jak kliknie to wywoluje sie funkcja clickCard
+    })
+}
+
+const clickCard = function() {
+    let activeCard = this;
+    activeCard.classList.remove("hidden");
+    document.getElementById(activeCard.id).value = cardsValues[whoseTurn];
+    cards[activeCard.id] = cardsValues[whoseTurn];
+    cards[activeCard.id].classList.add(cardsSigns[whoseTurn]);
+    activeCard.EventListener.remove("click", clickCard);
+    numberOfMoves = numberOfMoves + 1;
+    console.log("kliknieta karta!");
+    if (numberOfMoves >= 5) {
+        checkIfGameIsFinished();
+    }
+
+    if (whoseTurn == 0) {
+        whoseTurn = 1;
+    } else {
+
+        whoseTurn = 0;
+    }
+}
+
+const checkIfGameIsFinished = function() {
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            tableOfValues[i, j] = cards[i * 3 + j].value;
+        }
+    }
+    for (i = 0; i < 3; i++) {
+        if (tableOfValues[0, i] == tableOfValues[1, i] && tableOfValues[0, i] == tableOfValues[2, i]) {
+            console.log("koniec gry!");
+        }
+    }
+    for (i = 0; i < 3; i++) {
+        if (tableOfValues[i, 0] == tableOfValues[i, 1] && tableOfValues[i, 0] == tableOfValues[i, 2]) {
+            console.log("koniec gry!");
+        }
+    }
+    if (tableOfValues[0, 0] == tableOfValues[1, 1] && tableOfValues[0, 0] == tableOfValues[2, 2]) {
+        console.log("koniec gry!");
+    }
+    if (tableOfValues[0, 2] == tableOfValues[1, 1] && tableOfValues[0, 2] == tableOfValues[2, 0]) {
+        console.log("koniec gry!");
+    }
+}
+
 function Wstaw(buttonId) {
-  if (document.getElementById(buttonId).innerHTML.value == "0") {
-	  if(numberOfClicks % 2 == 0){
-		  document.getElementById(buttonId).innerHTML.value = "X";
-	  }
-	  else{
-		  document.getElementById(buttonId).innerHTML.value = "O";
-	  }
-	  numberOfClicks+=1;
-	}
+    if (document.getElementById(buttonId).innerHTML.value == "0") {
+        if (numberOfClicks % 2 == 0) {
+            document.getElementById(buttonId).innerHTML.value = "X";
+        } else {
+            document.getElementById(buttonId).innerHTML.value = "O";
+        }
+        numberOfClicks += 1;
+    }
 }
