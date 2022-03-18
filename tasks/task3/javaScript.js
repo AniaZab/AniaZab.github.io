@@ -47,7 +47,8 @@ const clickCard = function() {
 const checkIfGameIsFinished = function() {
     for (i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
-            tableOfValues[i, j] = cards[i * 3 + j].value;
+            tableOfValues[i, j] = cards[i * 3 + j];
+            console.log(tableOfValues[i, j]);
         }
     }
     for (i = 0; i < 3; i++) {
@@ -79,7 +80,7 @@ const checkIfGameIsFinished = function() {
     }
 }
 
-const NowaGra = function(buttonId) {
+const NowaGra = function() {
     location.reload();
 }
 
