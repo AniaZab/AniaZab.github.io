@@ -10,7 +10,7 @@
 
 div {
     width: 30%;
-    height: 70px;
+    height: 32%;
     background-color: #000;
     border-style: solid;
     border-color: white;
@@ -24,7 +24,7 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 30px;
     width: 80%;
     margin: 5%;
     padding: 5%;
@@ -91,9 +91,10 @@ header {
 
 article {
     float: left;
-    width: 46%;
+    width: 36%;
     padding: 2%;
     background-color: #f1f1f1;
+    height: 46%;
 }
 
 .tab {
@@ -108,11 +109,12 @@ article {
 aside {
     background-color: #666;
     width: 46%;
-    padding-right: 2%;
-    padding-left: 12%;
+    padding-right: 7%;
+    padding-left: 7%;
     padding-top: 2%;
     padding-bottom: 2%;
     float: left;
+    height: 46%;
 }
 
 footer {
