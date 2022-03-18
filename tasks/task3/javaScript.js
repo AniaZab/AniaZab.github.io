@@ -23,7 +23,7 @@ const clickCard = function() {
     activeCard.classList.remove("hidden");
     document.getElementById(activeCard.id).value = cardsValues[whoseTurn];
     cards[activeCard.id] = cardsValues[whoseTurn];
-    cards[activeCard.id].classList.add(cardsSigns[whoseTurn]);
+    activeCard.classList.add(cardsSigns[whoseTurn]);
     activeCard.EventListener.remove("click", clickCard);
     numberOfMoves = numberOfMoves + 1;
     console.log("kliknieta karta!");
