@@ -56,6 +56,7 @@ const checkIfGameIsFinished = function() {
             (tableOfValues[0, i] !== '0') && (tableOfValues[0, i] !== 'div')) {
             console.log("koniec gry!");
             console.log(tableOfValues[0, i]);
+            console.log(i)
             break;
         }
     }
@@ -64,6 +65,7 @@ const checkIfGameIsFinished = function() {
             !tableOfValues[i, 0] === "0") {
             console.log("koniec gry!");
             console.log(tableOfValues[i, 0]);
+            console.log(i)
             break;
         }
     }
