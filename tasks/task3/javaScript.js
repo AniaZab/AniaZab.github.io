@@ -51,27 +51,27 @@ const checkIfGameIsFinished = function() {
         }
     }
     for (i = 0; i < 3; i++) {
-        if (tableOfValues[0, i] == tableOfValues[1, i] && tableOfValues[0, i] == tableOfValues[2, i] &&
-            tableOfValues[0, i] != "0") {
+        if (tableOfValues[0, i] === tableOfValues[1, i] && tableOfValues[0, i] === tableOfValues[2, i] &&
+            !(tableOfValues[0, i] === "0")) {
             console.log("koniec gry!");
             console.log(tableOfValues[0, i]);
             break;
         }
     }
     for (i = 0; i < 3; i++) {
-        if (tableOfValues[i, 0] == tableOfValues[i, 1] && tableOfValues[i, 0] == tableOfValues[i, 2] &&
-            tableOfValues[i, 0] != "0") {
+        if (tableOfValues[i, 0] === tableOfValues[i, 1] && tableOfValues[i, 0] === tableOfValues[i, 2] &&
+            !tableOfValues[i, 0] === "0") {
             console.log("koniec gry!");
             console.log(tableOfValues[i, 0]);
             break;
         }
     }
-    if (tableOfValues[1, 1] != "0") {
-        if (tableOfValues[0, 0] == tableOfValues[1, 1] && tableOfValues[0, 0] == tableOfValues[2, 2]) {
+    if (!tableOfValues[1, 1] === "0") {
+        if (tableOfValues[0, 0] === tableOfValues[1, 1] && tableOfValues[0, 0] === tableOfValues[2, 2]) {
             console.log("koniec gry!");
             console.log(tableOfValues[0, 0]);
         }
-        if (tableOfValues[0, 2] == tableOfValues[1, 1] && tableOfValues[0, 2] == tableOfValues[2, 0]) {
+        if (tableOfValues[0, 2] === tableOfValues[1, 1] && tableOfValues[0, 2] === tableOfValues[2, 0]) {
             console.log("koniec gry!");
             console.log(tableOfValues[2, 0]);
         }
