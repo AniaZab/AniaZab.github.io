@@ -10,8 +10,6 @@ let tableOfValues = [
     ["0", "0", "0"]
 ];
 let numberOfMoves = 0;
-init();
-
 
 const init = function() {
     cards.forEach(card => {
@@ -75,3 +73,5 @@ const Wstaw = function(buttonId) {
         numberOfClicks += 1;
     }
 }
+
+init();
