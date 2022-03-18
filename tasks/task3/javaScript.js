@@ -24,7 +24,6 @@ const clickCard = function() {
     document.getElementById(activeCard.id).value = cardsValues[whoseTurn];
     cards[activeCard.id] = cardsValues[whoseTurn];
     activeCard.classList.add(cardsSigns[whoseTurn]);
-    activeCard.EventListener.remove("click", clickCard);
     numberOfMoves = numberOfMoves + 1;
     console.log("kliknieta karta!");
     if (numberOfMoves >= 5) {
