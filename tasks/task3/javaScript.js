@@ -52,7 +52,7 @@ const checkIfGameIsFinished = function() {
     }
     for (i = 0; i < 3; i++) {
         if (tableOfValues[0, i] === tableOfValues[1, i] && tableOfValues[0, i] === tableOfValues[2, i] &&
-            !(tableOfValues[0, i] === "0") && !(tableOfValues[0, i] === "div")) {
+            (tableOfValues[0, i] !== '0') && (tableOfValues[0, i] !== 'div')) {
             console.log("koniec gry!");
             console.log(tableOfValues[0, i]);
             break;
