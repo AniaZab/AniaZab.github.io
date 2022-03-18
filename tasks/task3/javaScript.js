@@ -31,7 +31,7 @@ const clickCard = function() {
     console.log("Id:");
     console.log(activeCard.id);
     console.log("Value:");
-    console.log(document.getElementById(activeCard.id).value);
+    console.log(cards[activeCard.id]);
     if (numberOfMoves >= 5) {
         checkIfGameIsFinished();
     }
@@ -52,7 +52,7 @@ const checkIfGameIsFinished = function() {
     }
     for (i = 0; i < 3; i++) {
         if (tableOfValues[0, i] === tableOfValues[1, i] && tableOfValues[0, i] === tableOfValues[2, i] &&
-            !(tableOfValues[0, i] === "0")) {
+            !(tableOfValues[0, i] === "0") && !(tableOfValues[0, i] === "div")) {
             console.log("koniec gry!");
             console.log(tableOfValues[0, i]);
             break;
@@ -79,15 +79,8 @@ const checkIfGameIsFinished = function() {
     }
 }
 
-const Wstaw = function(buttonId) {
-    if (document.getElementById(buttonId).innerHTML.value == "0") {
-        if (numberOfClicks % 2 == 0) {
-            document.getElementById(buttonId).innerHTML.value = "X";
-        } else {
-            document.getElementById(buttonId).innerHTML.value = "O";
-        }
-        numberOfClicks += 1;
-    }
+const NowaGra = function(buttonId) {
+    location.reload();
 }
 
 init();
