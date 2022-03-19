@@ -20,21 +20,21 @@ div {
 }
 
 button {
-    border-radius: 1em;
-    padding: 1em;
-    position: absolute;
     color: white;
+    padding: 16px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 50px;
     height: 200px;
     width: 80%;
-    padding: 5%;
     margin: 5%;
-    margin-top: -10%;
+    padding: 5%;
+    transition-duration: 0.4s;
     cursor: pointer;
     background-color: red;
+    border: none;
+    margin-top: -10%;
 }
 
 .button:hover {
