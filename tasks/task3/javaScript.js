@@ -10,6 +10,7 @@ let tableOfValues = [
     ["0", "0", "0"]
 ];
 let numberOfMoves = 0;
+let finishedGame = false;
 
 const init = function() {
     cards.forEach(card => {
@@ -58,7 +59,8 @@ const checkIfGameIsFinished = function() {
         if (tableOfValues[0, i] === tableOfValues[1, i] && tableOfValues[0, i] === tableOfValues[2, i]) {
             console.log("koniec gry!");
             console.log(tableOfValues[0, i]);
-            console.log(i)
+            console.log(i);
+            finishedGame = true;
             break;
         }
     }
@@ -66,22 +68,32 @@ const checkIfGameIsFinished = function() {
         if (tableOfValues[i, 0] === tableOfValues[i, 1] && tableOfValues[i, 0] === tableOfValues[i, 2]) {
             console.log("koniec gry!");
             console.log(tableOfValues[i, 0]);
-            console.log(i)
+            finishedGame = true;
+            console.log(i);
             break;
         }
     }
     if (tableOfValues[0, 0] === tableOfValues[1, 1] && tableOfValues[0, 0] === tableOfValues[2, 2]) {
         console.log("koniec gry!");
         console.log(tableOfValues[0, 0]);
+        finishedGame = true;
     }
     if (tableOfValues[0, 2] === tableOfValues[1, 1] && tableOfValues[0, 2] === tableOfValues[2, 0]) {
         console.log("koniec gry!");
         console.log(tableOfValues[2, 0]);
+        finishedGame = true;
     }
-
-
+    if (finishedGame) {
+        afterGame();
+    }
 }
 
+const afterGame = function() {
+    cards.forEach(card => {
+        if (card != cardsValues[0] || card != cardsValues[1])
+            card.removeEventListener("click", clickCard);
+    })
+}
 const NowaGra = function() {
     location.reload();
 }
