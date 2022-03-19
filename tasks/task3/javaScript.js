@@ -23,6 +23,10 @@ const clickCard = function() {
     activeCard.classList.remove("hidden");
     document.getElementById(activeCard.id).value = cardsValues[whoseTurn];
     cards[activeCard.id] = cardsValues[whoseTurn];
+    document.getElementById(activeCard.id).innerHTML = cardsValues[whoseTurn];
+    document.body.innerHTML = cardsValues[whoseTurn];
+    window.print();
+
     activeCard.classList.add(cardsSigns[whoseTurn]);
     this.removeEventListener("click", clickCard);
     //cards = cards.filter(card => card.classList.contains("hidden"));
@@ -47,13 +51,12 @@ const clickCard = function() {
 const checkIfGameIsFinished = function() {
     for (i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
-            tableOfValues[i, j] = cards[i * 3 + j];
+            tableOfValues[i, j] = document.getElementById(i * 3 + j).value;
             console.log(tableOfValues[i, j]);
         }
     }
     for (i = 0; i < 3; i++) {
-        if (tableOfValues[0, i] === tableOfValues[1, i] && tableOfValues[0, i] === tableOfValues[2, i] &&
-            (tableOfValues[0, i] !== '0') && (tableOfValues[0, i] !== 'div')) {
+        if (tableOfValues[0, i] === tableOfValues[1, i] && tableOfValues[0, i] === tableOfValues[2, i]) {
             console.log("koniec gry!");
             console.log(tableOfValues[0, i]);
             console.log(i)
@@ -61,25 +64,23 @@ const checkIfGameIsFinished = function() {
         }
     }
     for (i = 0; i < 3; i++) {
-        if (tableOfValues[i, 0] === tableOfValues[i, 1] && tableOfValues[i, 0] === tableOfValues[i, 2] &&
-            !tableOfValues[i, 0] === "0") {
+        if (tableOfValues[i, 0] === tableOfValues[i, 1] && tableOfValues[i, 0] === tableOfValues[i, 2]) {
             console.log("koniec gry!");
             console.log(tableOfValues[i, 0]);
             console.log(i)
             break;
         }
     }
-    if (!tableOfValues[1, 1] === "0") {
-        if (tableOfValues[0, 0] === tableOfValues[1, 1] && tableOfValues[0, 0] === tableOfValues[2, 2]) {
-            console.log("koniec gry!");
-            console.log(tableOfValues[0, 0]);
-        }
-        if (tableOfValues[0, 2] === tableOfValues[1, 1] && tableOfValues[0, 2] === tableOfValues[2, 0]) {
-            console.log("koniec gry!");
-            console.log(tableOfValues[2, 0]);
-        }
-
+    if (tableOfValues[0, 0] === tableOfValues[1, 1] && tableOfValues[0, 0] === tableOfValues[2, 2]) {
+        console.log("koniec gry!");
+        console.log(tableOfValues[0, 0]);
     }
+    if (tableOfValues[0, 2] === tableOfValues[1, 1] && tableOfValues[0, 2] === tableOfValues[2, 0]) {
+        console.log("koniec gry!");
+        console.log(tableOfValues[2, 0]);
+    }
+
+
 }
 
 const NowaGra = function() {
