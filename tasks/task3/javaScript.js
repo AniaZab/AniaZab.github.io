@@ -89,10 +89,8 @@ const checkIfGameIsFinished = function() {
 }
 
 const afterGame = function() {
-    cards.forEach(card => {
-        if (card != cardsValues[0] || card != cardsValues[1])
-            .removeEventListener("click", clickCard);
-    })
+    alert("Koniec gry, czy chcesz rozpocząć nową?");
+    NowaGra();
 }
 const NowaGra = function() {
     location.reload();
