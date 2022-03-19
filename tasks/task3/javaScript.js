@@ -24,8 +24,7 @@ const clickCard = function() {
     document.getElementById(activeCard.id).value = cardsValues[whoseTurn];
     cards[activeCard.id] = cardsValues[whoseTurn];
     document.getElementById(activeCard.id).innerHTML = cardsValues[whoseTurn];
-    document.body.innerHTML = cardsValues[whoseTurn];
-    window.print();
+    //document.body.innerHTML = cardsValues[whoseTurn];
 
     activeCard.classList.add(cardsSigns[whoseTurn]);
     this.removeEventListener("click", clickCard);
