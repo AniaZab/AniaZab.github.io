@@ -91,7 +91,7 @@ const checkIfGameIsFinished = function() {
 const afterGame = function() {
     cards.forEach(card => {
         if (card != cardsValues[0] || card != cardsValues[1])
-            card.removeEventListener("click", clickCard);
+            .removeEventListener("click", clickCard);
     })
 }
 const NowaGra = function() {
