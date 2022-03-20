@@ -4,26 +4,26 @@ const cardsValues = ["O", "X"];
 let cards = document.querySelectorAll("div");
 cards = [...cards];
 let whoseTurn = 0;
-let tableOfValues = [
-    ["0", "0", "0"],
-    ["0", "0", "0"],
-    ["0", "0", "0"]
-];
+var tableOfValues;
 let numberOfMoves = 0;
 let finishedGame = false;
-
+var ruch = 0; // 0 - nie ma ruchu, -1 krzyżyk, 1 kółko
 const init = function() {
     cards.forEach(card => {
         card.classList.add("hidden")
         card.addEventListener("click", clickCard) //nasłuchuje na click i jak kliknie to wywoluje sie funkcja clickCard
     })
+    tableOfValues = new Array(3);
+    for (var i = 0; i < tableOfValues.length; i++) {
+        tableOfValues[i] = new Array(tableOfValues.length);
+        for (var x = 0; x < tableOfValues.length; x++)
+            tableOfValues[i][x] = 0;
+    }
 }
 
 const clickCard = function() {
     let activeCard = this;
     activeCard.classList.remove("hidden");
-    document.getElementById(activeCard.id).value = cardsValues[whoseTurn];
-    cards[activeCard.id] = cardsValues[whoseTurn];
     document.getElementById(activeCard.id).innerHTML = cardsValues[whoseTurn];
     //document.body.innerHTML = cardsValues[whoseTurn];
 
@@ -31,66 +31,67 @@ const clickCard = function() {
     this.removeEventListener("click", clickCard);
     //cards = cards.filter(card => card.classList.contains("hidden"));
     numberOfMoves = numberOfMoves + 1;
+
+    if (whoseTurn == 0) {
+        ruch = 1;
+        whoseTurn = 1;
+    } else {
+        whoseTurn = 0;
+        ruch = -1;
+    }
+    tableOfValues[parseInt(this.target.getAttribute("x"))][parseInt(zdarzenie.target.getAttribute("y"))] = ruch;
+
+
     console.log("kliknieta karta!");
     console.log("Id:");
     console.log(activeCard.id);
     console.log("Value:");
     console.log(cards[activeCard.id]);
     if (numberOfMoves >= 5) {
-        checkIfGameIsFinished();
-    }
-
-    if (whoseTurn == 0) {
-        whoseTurn = 1;
-    } else {
-
-        whoseTurn = 0;
+        afterGame()
     }
 }
 
 const checkIfGameIsFinished = function() {
-    for (i = 0; i < 3; i++) {
-        for (j = 0; j < 3; j++) {
-            tableOfValues[i, j] = document.getElementById(i * 3 + j).value;
-            console.log(tableOfValues[i, j]);
-        }
+    for (var i = 0; i < 3; i++) {
+        //Sprawdzam w poziomie
+        if (Math.abs(tableOfValues[0][i] + tableOfValues[1][i] + tableOfValues[2][i]) == 3)
+            return tableOfValues[0][i];
+        //Sprawdzam w pionie
+        if (Math.abs(tableOfValues[i][0] + tableOfValues[i][1] + tableOfValues[i][2]) == 3)
+            return tableOfValues[i][0];
     }
-    for (i = 0; i < 3; i++) {
-        if (tableOfValues[0, i] === tableOfValues[1, i] && tableOfValues[0, i] === tableOfValues[2, i]) {
-            console.log("koniec gry!");
-            console.log(tableOfValues[0, i]);
-            console.log(i);
-            finishedGame = true;
-            break;
-        }
+    //Sprawdzam skosy
+    if (Math.abs(tableOfValues[0][0] + tableOfValues[1][1] + tableOfValues[2][2]) == 3)
+        return tableOfValues[0][0];
+    if (Math.abs(tableOfValues[0][2] + tableOfValues[1][1] + tableOfValues[2][0]) == 3)
+        return tableOfValues[0][2];
+    //Sprawdzam czy plansza nie jest zapelniona jak jest i nie ma nadal wygranej to remis
+    if (numberOfMoves >= 9) {
+        return -2;
     }
-    for (i = 0; i < 3; i++) {
-        if (tableOfValues[i, 0] === tableOfValues[i, 1] && tableOfValues[i, 0] === tableOfValues[i, 2]) {
-            console.log("koniec gry!");
-            console.log(tableOfValues[i, 0]);
-            finishedGame = true;
-            console.log(i);
-            break;
-        }
-    }
-    if (tableOfValues[0, 0] === tableOfValues[1, 1] && tableOfValues[0, 0] === tableOfValues[2, 2]) {
-        console.log("koniec gry!");
-        console.log(tableOfValues[0, 0]);
-        finishedGame = true;
-    }
-    if (tableOfValues[0, 2] === tableOfValues[1, 1] && tableOfValues[0, 2] === tableOfValues[2, 0]) {
-        console.log("koniec gry!");
-        console.log(tableOfValues[2, 0]);
-        finishedGame = true;
-    }
-    if (finishedGame) {
-        afterGame();
-    }
+    return false;
 }
 
 const afterGame = function() {
-    alert("Koniec gry, czy chcesz rozpocząć nową?");
-    NowaGra();
+    switch (checkIfGameIsFinished()) {
+        //najpopularniejsza opcja wiec na poczatek sprawdzamy i jak jest to przerywamy sprawdzanie
+        case false:
+            break;
+            //Już wiemy że koniec więc blokujemy interfejs odbierając ruch
+        case -1:
+            alert("Wygrał krzyżyk");
+            NowaGra();
+            break;
+        case 1:
+            alert("Wygrało kólko");
+            NowaGra();
+            break;
+        case -2:
+            alert("Remis");
+            NowaGra();
+            break;
+    }
 }
 const NowaGra = function() {
     location.reload();
