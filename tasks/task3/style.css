@@ -17,6 +17,7 @@ div {
     font-size: 30px;
     cursor: pointer;
     vertical-align: middle;
+    line-height: 30%;
 }
 
 button {
