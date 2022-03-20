@@ -39,7 +39,6 @@ button {
     cursor: pointer;
     background-color: red;
     border: none;
-    margin-bottom: 30%;
 }
 
 button:hover {
@@ -103,6 +102,8 @@ article {
     padding: 2%;
     background-color: #666;
     height: 400px;
+    align-items: center;
+    justify-content: center;
 }
 
 .tab {
