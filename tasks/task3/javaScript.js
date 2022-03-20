@@ -39,7 +39,7 @@ const clickCard = function() {
         whoseTurn = 0;
         ruch = -1;
     }
-    tableOfValues[parseInt(this.target.getAttribute("x"))][parseInt(this.target.getAttribute("y"))] = ruch;
+    tableOfValues[parseInt(this.getAttribute("x"))][parseInt(this.getAttribute("y"))] = ruch;
     this.getAttribute
 
     console.log("kliknieta karta!");
