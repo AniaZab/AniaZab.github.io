@@ -37,8 +37,7 @@ const clickCard = function() {
         whoseTurn = 0;
         ruch = -1;
     }
-    tableOfValues[parseInt(this.getAttribute("x"))][parseInt(this.getAttribute("y"))] = ruch;
-    this.getAttribute
+    addElementToTheTable();
 
     console.log("kliknieta karta!");
     console.log("Id:");
@@ -47,6 +46,16 @@ const clickCard = function() {
     console.log(cards[activeCard.id]);
     if (numberOfMoves >= 5) {
         afterGame()
+    }
+}
+
+const addElementToTheTable = function(this, ruch) {
+    if (this.id < 3) {
+        tableOfValues[0][this.id] = ruch;
+    } else if (this.id < 6) {
+        tableOfValues[1][this.id - 3] = ruch;
+    } else {
+        tableOfValues[2][this.id - 6] = ruch;
     }
 }
 
