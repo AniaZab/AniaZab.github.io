@@ -25,11 +25,9 @@ const clickCard = function() {
     let activeCard = this;
     activeCard.classList.remove("hidden");
     document.getElementById(activeCard.id).innerHTML = cardsValues[whoseTurn];
-    //document.body.innerHTML = cardsValues[whoseTurn];
 
     activeCard.classList.add(cardsSigns[whoseTurn]);
     this.removeEventListener("click", clickCard);
-    //cards = cards.filter(card => card.classList.contains("hidden"));
     numberOfMoves = numberOfMoves + 1;
 
     if (whoseTurn == 0) {
