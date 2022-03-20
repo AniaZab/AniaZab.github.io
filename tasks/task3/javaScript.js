@@ -66,7 +66,7 @@ const checkIfGameIsFinished = function() {
         return tableOfValues[0][0];
     if (Math.abs(tableOfValues[0][2] + tableOfValues[1][1] + tableOfValues[2][0]) == 3)
         return tableOfValues[0][2];
-    //Sprawdzam czy plansza nie jest zapelniona jak jest i nie ma nadal wygranej to remis
+    //Sprawdzam czy remis
     if (numberOfMoves >= 9) {
         return -2;
     }
@@ -75,10 +75,8 @@ const checkIfGameIsFinished = function() {
 
 const afterGame = function() {
     switch (checkIfGameIsFinished()) {
-        //najpopularniejsza opcja wiec na poczatek sprawdzamy i jak jest to przerywamy sprawdzanie
         case false:
             break;
-            //Już wiemy że koniec więc blokujemy interfejs odbierając ruch
         case -1:
             alert("Wygrał krzyżyk");
             NowaGra();
