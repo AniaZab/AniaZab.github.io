@@ -37,7 +37,7 @@ const clickCard = function() {
         whoseTurn = 0;
         ruch = -1;
     }
-    addElementToTheTable();
+    addElementToTheTable(this, ruch);
 
     console.log("kliknieta karta!");
     console.log("Id:");
