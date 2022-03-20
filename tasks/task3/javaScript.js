@@ -37,7 +37,7 @@ const clickCard = function() {
         whoseTurn = 0;
         ruch = -1;
     }
-    addElementToTheTable(this, ruch);
+    addElementToTheTable(this);
 
     console.log("kliknieta karta!");
     console.log("Id:");
@@ -49,13 +49,13 @@ const clickCard = function() {
     }
 }
 
-const addElementToTheTable = function(this, ruch) {
-    if (this.id < 3) {
-        tableOfValues[0][this.id] = ruch;
-    } else if (this.id < 6) {
-        tableOfValues[1][this.id - 3] = ruch;
+const addElementToTheTable = function(karta) {
+    if (karta.id < 3) {
+        tableOfValues[0][karta.id] = ruch;
+    } else if (karta.id < 6) {
+        tableOfValues[1][karta.id - 3] = ruch;
     } else {
-        tableOfValues[2][this.id - 6] = ruch;
+        tableOfValues[2][karta.id - 6] = ruch;
     }
 }
 
