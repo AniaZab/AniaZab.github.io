@@ -1,7 +1,8 @@
 img {
-	max-width:100%;
-	height:auto;
+    max-width: 100%;
+    height: auto;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -33,24 +34,6 @@ li a:hover:not(.active) {
 img {
     width: 100%;
     float: none;
-}
-
-nav {
-    width: 100%;
-    font-size: 20px;
-    padding: 5px;
-    height: 50px;
-    margin-left: -5px;
-}
-
-header {
-    background-color: #666;
-    text-align: center;
-    /*clear: both;*/
-    font-size: 30px;
-    color: white;
-    padding: 5px;
-    height: 20%;
 }
 
 article {
