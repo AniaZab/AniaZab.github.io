@@ -23,3 +23,7 @@
     grid-gap: 20px;
     padding: 20px;
 }
+
+button {
+    margin: auto;
+}
