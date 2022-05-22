@@ -1,6 +1,7 @@
 img {
     max-width: 100%;
     height: auto;
+    float: none;
 }
 
 ul {
@@ -29,11 +30,6 @@ li a:hover:not(.active) {
 
 .active {
     background-color: rgb(92, 78, 145);
-}
-
-img {
-    width: 100%;
-    float: none;
 }
 
 article {
