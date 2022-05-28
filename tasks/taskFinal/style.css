@@ -29,7 +29,7 @@ li a:hover:not(.active) {
 }
 
 .active {
-    background-color: rgb(92, 78, 145);
+    background-color: rgb(140, 156, 184);
 }
 
 article {
