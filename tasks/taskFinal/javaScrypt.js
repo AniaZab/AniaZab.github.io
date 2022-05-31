@@ -1,5 +1,5 @@
-function selectFromTable() {
-    $('#dtBasicExample').DataTable();
-    $('.dataTables_length').addClass('bs-select');
+function show(shown, hidden) {
+    document.getElementById(shown).style.display = 'block';
+    document.getElementById(hidden).style.display = 'none';
+    return false;
 }
-$(document).ready(selectFromTable);
