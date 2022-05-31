@@ -5,5 +5,5 @@ function show(shown) {
         document.getElementById(page).style.display = 'none'
     })
     document.getElementById(shown).style.display = 'block';
-    return false;
 }
+show("PageUsualEvents");
