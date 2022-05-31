@@ -31,7 +31,13 @@
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#addEvent">Dodaj ogłoszenie</a>
+                        <a class="nav-link" href="#" onclick="return show('PageUsualEvents');">Regularne wydarzenia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="return show('PageSpecialEvents');">Nowe ogłoszenia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="return show('PageLogin');">Dodaj ogłoszenie</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Kontakt</a>
@@ -45,13 +51,14 @@
         </div>
     </nav>
 </header>
+
 <section>
     <div>
         <img src="main_picture.jpg">
     </div>
 </section>
 
-<section class="pt-2 p-1 bg-light">
+<section id="PageUsualEvents" class="pt-2 p-1 bg-light">
     <div class="container-lg mt-lg-auto">
         <div class="p-2 rounded border-primary text-center">
             <h1>Regularne wydarzenia</h1>
@@ -135,12 +142,12 @@
         </div>
     </div>
 </section>
-<section class="pt-4 p-1 bg-gradient">
+<section id="PageSpecialEvents" class="pt-4 p-1 bg-gradient display:none">
     <div class="container-lg mt-lg-5 text-center">
-        <h1>Jednorazowe ogłoszenia</h1>
+        <h1>Nowe ogłoszenia</h1>
         <div class="table-responsive-md">
             <table id="dtBasicExample" class="table align-middle table-hover table-success table-striped" cellspacing="0">
-                <caption>Lista jednorazowych ogłoszeń</caption>
+                <caption>Lista nowych ogłoszeń</caption>
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -254,6 +261,10 @@
         </div>
     </div>
 </section>
+<div id="PageRegister"></div>
+<div id="PageLogin"></div>
+<div id="PageAddEvent"></div>
+
 
 <footer class="bg-dark">
     <div class="p-3 bg-primary text-white text-center">

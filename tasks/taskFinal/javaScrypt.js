@@ -1,5 +1,9 @@
-function show(shown, hidden) {
+const pagesInWebsite = ["PageUsualEvents", "PageSpecialEvents", "PageRegister", "PageLogin", "PageAddEvent"];
+
+function show(shown) {
+    pagesInWebsite.forEach(page => {
+        document.getElementById(page).style.display = 'none'
+    })
     document.getElementById(shown).style.display = 'block';
-    document.getElementById(hidden).style.display = 'none';
     return false;
 }
