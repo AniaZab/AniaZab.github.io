@@ -1,4 +1,4 @@
-const pagesInWebsite = ["PageUsualEvents", "PageSpecialEvents", "PageRegister", "PageLogin", "PageAddEvent"];
+const pagesInWebsite = ["PageUsualEvents", "PageNewEvents", "PageRegister", "PageLogin", "PageAddEvent"];
 
 function show(shown) {
     pagesInWebsite.forEach(page => {
