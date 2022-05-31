@@ -1,4 +1,4 @@
-const pagesInWebsite = ["PageUsualEvents", "PageNewEvents", "PageRegister", "PageLogin", "PageAddEvent"];
+const pagesInWebsite = ["PageRegularEvents", "PageNewEvents", "PageRegister", "PageLogin", "PageAddEvent"];
 
 function show(shown) {
     pagesInWebsite.forEach(page => {
@@ -6,4 +6,4 @@ function show(shown) {
     })
     document.getElementById(shown).style.display = 'block';
 }
-show("PageUsualEvents");
+show("PageRegularEvents");
