@@ -52,7 +52,7 @@
     </nav>
 </header>
 
-<section id="PageUsualEvents" class="pt-2 p-1 bg-light display:none">
+<section id="PageUsualEvents" class="pt-2 p-1 bg-light">
     <div class="container-lg mt-lg-auto">
         <div class="p-2 rounded border-primary text-center">
             <h1>Regularne wydarzenia</h1>
@@ -128,26 +128,32 @@
 
             <!-- Left and right controls/icons -->
             <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
+                <span class="carousel-control-prev-icon"></span>
+            </button>
             <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
     </div>
 </section>
 
 <section id="PageRegister" class="pt-2 p-1 bg-light display:none">
-    <form>
+    <div class="container-lg mt-lg-auto">
+        <div class="p-2 rounded border-primary text-center">
+            <h1>Rejestracja</h1>
+        </div>
+        <form>
 
-    </form>
+        </form>
 </section>
-<div id="PageLogin" class="display:none"></div>
-<div id="PageAddEvent" class="display:none"></div>
+<section id="PageLogin" class="display:none"></section>
+<section id="PageAddEvent" class="display:none"></section>
 
-<section id="PageSpecialEvents" class="pt-4 p-1 bg-gradient display:none">
-    <div class="container-lg mt-lg-5 text-center">
+<section id="PageSpecialEvents" class="pt-2 p-1 bg-gradient display:none">
+    <div class="p-2 rounded border-primary text-center">
         <h1>Nowe ogłoszenia</h1>
+    </div>
+    <div class="container-lg mt-lg-5 text-center">
         <div class="table-responsive-md">
             <table id="dtBasicExample" class="table align-middle table-hover table-success table-striped" cellspacing="0">
                 <caption>Lista nowych ogłoszeń</caption>
