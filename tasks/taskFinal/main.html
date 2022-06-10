@@ -39,7 +39,7 @@
                             <a class="nav-link" href="#" onclick="return show('PageNewEvents');">Nowe ogłoszenia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="return show('PageLogin');">Dodaj ogłoszenie</a>
+                            <a class="nav-link" href="#" onclick="return show('PageAddEvent');">Dodaj ogłoszenie</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Kontakt</a>
@@ -150,7 +150,47 @@
     </section>
 
     <section id="PageLogin" style="display:none"></section>
-    <section id="PageAddEvent" style="display:none"></section>
+    <section id="PageAddEvent" style="display:none">
+        <div class="container-lg mt-lg-auto">
+            <div class="p-2 rounded border-primary text-center">
+                <h1>Dodaj ogłoszenie</h1>
+            </div>
+            <form class="text-info">
+                <div class="form-group row">
+                    <label for="category" class="col-sm-2 col-form-label">Kategoria</label>
+                    <div class="col-sm-10">
+                        <select multiple class="form-select" id="category" name="sellist2">
+                            <option>Modlitwa</option>
+                            <option>Uwielbienie</option>
+                            <option>Młodzież</option>
+                            <option>Dzieci</option>
+                            <option>Małżeństwa</option>
+                            <option>Obóz</option>
+                            <option>Konferencja</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="title" class="col-sm-2 col-form-label">Tytuł</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control mt-3" id="title" placeholder="Podaj tytuł">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Zaznacz datę wydarzenia</label>
+                    <div class="col-sm-10">
+                        <div class="input-group date" data-provide="datepicker">
+                            <input type="text" class="form-control">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-th"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
 
     <section id="PageNewEvents" class="pt-2 p-1 bg-gradient" style="display:none">
         <div class="p-2 rounded border-primary text-center">
