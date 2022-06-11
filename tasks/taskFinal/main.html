@@ -157,7 +157,7 @@
 
     <section id="PageLogin" style="display:none"></section>
     <section id="PageAddEvent" style="display:none">
-        <div class="container-md mt-md-auto pt-md-5">
+        <div class="container-sm mt-sm-auto pt-sm-5">
             <div class="p-2 rounded border-primary text-center">
                 <h1>Dodaj ogłoszenie</h1>
             </div>
@@ -192,12 +192,14 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-5">
                             <label for="startTime">Podaj godzinę rozpoczęcia</label>
-                            <input type="time" class="form-control" id="startTime">
+                            <div>
+                                <input type="time" class="form-control" id="startTime">
+                            </div>
                         </div>
                     </div>
-                    <div class="form-row">
+                    <div class="row">
                         <div class="form-group col-md-7">
                             <label for="dateFinishPicker" class="form-label">Podaj datę zakończenia</label>
                             <div class="input-group date" id="dateFinishPicker">
@@ -209,7 +211,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-5">
                             <label for="finishTime">Podaj godzinę zakończenia</label>
                             <input type="time" class="form-control" id="finishTime">
                         </div>
@@ -228,8 +230,8 @@
                         <label for="dodatkoweInfo" class="form-label">Dodatkowe informacje</label>
                         <textarea class="form-control" id="textAreaDodatkoweInfo" rows="2" placeholder="Podaj dodatkowe informacje"></textarea>
                     </div>
-                    <input type="reset" value="Resetuj">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <input type="reset" class="btn btn-outline-danger" value="Resetuj">
+                    <button type="submit" class="btn btn-primary">Dodaj</button>
                 </div>
             </form>
         </div>
