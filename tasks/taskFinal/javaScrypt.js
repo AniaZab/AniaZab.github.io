@@ -1,4 +1,12 @@
 const pagesInWebsite = ["PageRegularEvents", "PageNewEvents", "PageRegister", "PageLogin", "PageAddEvent"];
+let picker = document.getElementById("datetimepicker1");
+
+const init = function() {
+    picker.addEventListener("click", clickPicker);
+}
+const clickPicker = function() {
+    document.getElementById("datetimepicker1").datepicker();
+}
 
 function show(shown) {
     pagesInWebsite.forEach(page => {
@@ -7,11 +15,6 @@ function show(shown) {
     document.getElementById(shown).style.display = 'block';
     return false;
 }
-show("PageRegularEvents");
-$(function() {
-    $('#datepicker').datepicker();
-});
 
-$(function() {
-    $('#datetimepicker1').datepicker();
-});
+show("PageRegularEvents");
+init();
