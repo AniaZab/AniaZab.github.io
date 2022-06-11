@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
 img {
     max-width: 100%;
     height: auto;
@@ -85,14 +87,6 @@ table.dataTable thead .sorting_desc_disabled:before {
     bottom: .5em;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
-body {
-    font-family: 'Didact Gothic', sans-serif;
-    color: #333;
-    box-sizing: border-box;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -112,14 +106,6 @@ nav {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-}
-
-.logo {
-    width: 100px;
-}
-
-.logo img {
-    width: 100px;
 }
 
 .lang-menu {
@@ -190,20 +176,12 @@ nav {
     background-repeat: no-repeat;
 }
 
-.de:before {
-    background-image: url(https://www.countryflags.io/de/flat/32.png);
-}
-
 .en:before {
     background-image: url(https://www.countryflags.io/us/flat/32.png);
 }
 
-.fr:before {
+.pl:before {
     background-image: url(https://www.countryflags.io/fr/flat/32.png);
-}
-
-.ar:before {
-    background-image: url(https://www.countryflags.io/ae/flat/32.png);
 }
 
 .lang-menu:hover ul {
