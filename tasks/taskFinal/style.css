@@ -87,25 +87,8 @@ table.dataTable thead .sorting_desc_disabled:before {
     bottom: .5em;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 a {
     text-decoration: none;
-}
-
-header {
-    background-color: #f2f2f2;
-    height: 110px;
-    padding: 10px 0;
-}
-
-nav {
-    width: 960px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
 }
 
 .lang-menu {
@@ -177,11 +160,11 @@ nav {
 }
 
 .en:before {
-    background-image: url(https://www.countryflags.io/us/flat/32.png);
+    background-image: url(https://www.worldometers.info/img/flags/uk-flag.gif);
 }
 
 .pl:before {
-    background-image: url(https://www.countryflags.io/fr/flat/32.png);
+    background-image: url(https://www.worldometers.info/img/flags/pl-flag.gif);
 }
 
 .lang-menu:hover ul {
