@@ -13,5 +13,5 @@ $(function() {
 });
 
 $(function() {
-    $('#datetimepicker').datetimepicker();
+    $('#datetimepicker1').datepicker();
 });
