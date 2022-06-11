@@ -62,6 +62,13 @@ footer {
     margin-top: 5px;
 }
 
+label,
+select,
+input,
+button {
+    padding: 1%;
+}
+
 .carousel-item img {
     width: auto;
     max-height: 350px;
