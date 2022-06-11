@@ -8,3 +8,7 @@ function show(shown) {
     return false;
 }
 show("PageRegularEvents");
+
+$(function() {
+    $('#datepicker').datepicker();
+});
