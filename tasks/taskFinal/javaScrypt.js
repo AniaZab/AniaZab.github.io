@@ -12,7 +12,3 @@ show("PageRegularEvents");
 $(function() {
     $('#datepicker').datepicker();
 });
-
-$(function() {
-    $('#datetimepicker1').datetimepicker();
-});
