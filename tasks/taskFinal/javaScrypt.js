@@ -8,7 +8,6 @@ function show(shown) {
     return false;
 }
 show("PageRegularEvents");
-$('#datepicker').datepicker({
-    format: 'mm/dd/yyyy',
-    startDate: '-3d'
+$(function() {
+    $('#datepicker').datepicker();
 });
