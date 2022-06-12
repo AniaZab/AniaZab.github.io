@@ -26,7 +26,8 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
+li a:hover:not(.active),
+.lang-menu .selected-lang:hover:not(.active) {
     background-color: #111;
 }
 
@@ -95,7 +96,6 @@ a {
     width: 100px;
     text-align: right;
     font-weight: bold;
-    margin-top: 25px;
     position: relative;
     background-color: #333;
     color: white;
