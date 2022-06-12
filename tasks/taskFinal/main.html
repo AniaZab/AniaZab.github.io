@@ -53,12 +53,14 @@
 
                     </ul>
                     <div class="lang-menu">
-                        <div class="selected-lang">
-                            English
-                        </div>
+                        <div id="language" value="English" class="selected-lang"></div>
                         <ul>
-                            <li class="nav-item"><a href="#" class="pl nav-link">Polish</a></li>
-                            <li class="nav-item"><a href="" class="en nav-link">English</a></li>
+                            <li class="nav-item">
+                                <a href="#" id="pl" onclick="return changeLanguage(this)" class="pl nav-link" value="Polish"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" id="en" onclick="return changeLanguage(this)" class="en nav-link" value="English"></a>
+                            </li>
                         </ul>
                     </div>
 

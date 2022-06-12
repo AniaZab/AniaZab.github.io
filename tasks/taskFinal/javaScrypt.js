@@ -8,3 +8,7 @@ function show(shown) {
     return false;
 }
 show("PageRegularEvents");
+
+function changeLanguage(this) {
+    document.getElementById('language').value = this.value;
+}
