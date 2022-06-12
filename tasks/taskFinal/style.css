@@ -97,12 +97,14 @@ a {
     font-weight: bold;
     margin-top: 25px;
     position: relative;
+    background-color: #333;
+    color: white;
 }
 
 .lang-menu .selected-lang {
     display: flex;
     justify-content: space-between;
-    line-height: 2;
+    line-height: 1;
     cursor: pointer;
 }
 
@@ -161,10 +163,12 @@ a {
 
 .en:before {
     background-image: url(https://www.worldometers.info/img/flags/uk-flag.gif);
+    color: #111;
 }
 
 .pl:before {
     background-image: url(https://www.worldometers.info/img/flags/pl-flag.gif);
+    color: #111;
 }
 
 .lang-menu:hover ul {
